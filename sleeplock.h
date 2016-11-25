@@ -7,4 +7,7 @@ struct sleeplock {
   char *name;        // Name of lock.
   int pid;           // Process holding lock
 };
-
+void initsleeplock(struct sleeplock *lk, char *name);	
+void acquiresleep(struct sleeplock *lk);
+void releasesleep(struct sleeplock *lk);
+int holdingsleep(struct sleeplock *lk);
